@@ -1,0 +1,15 @@
+[Unit]
+Description=Celery Beat Scheduler for gamifikace
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/gamifikace-backend/Projekt
+Environment="DJANGO_SETTINGS_MODULE=gamifikace.settings"
+ExecStart=/root/venv/bin/celery -A gamifikace beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

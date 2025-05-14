@@ -1,0 +1,14 @@
+[Unit]
+Description=Celery Worker for gamifikace
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/gamifikace-backend/Projekt
+Environment="DJANGO_SETTINGS_MODULE=gamifikace.settings"
+ExecStart=/root/venv/bin/celery -A gamifikace worker --loglevel=info
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
