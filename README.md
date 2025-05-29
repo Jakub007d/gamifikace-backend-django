@@ -10,7 +10,7 @@ Pre lokálnu inštaláciu backendu aplikácie je potrebné postupovať následov
 Backend bude v následujúcich 3 mesiacoch bežať aj online na stránke https://gamifikace.ink/api. Táto stránka poskytuje endpointy ku ktorým pristupuje frontend. Taktiež sa tu nachádza administrátorský mód https://gamifikace.ink/admin. Pristúpit je k nemu možné pomocou týchto prihlasovacích udajov :
 
 - Užívateľské meno : admin
-- Heslo : Heslo123123!
+- Heslo : ******
 
 ---
 
